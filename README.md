@@ -34,6 +34,7 @@ palindrome(testString);
 
 ## How to run
 * git clone
+
 In your terminal run:
 ```
 http-server -p 9999
