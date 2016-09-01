@@ -14,15 +14,28 @@ function reversal() {
 	// console.log(revArr.join(' '));
 	document.getElementById('output').innerHTML += `<li>${revArr.join(' ')}</li>`;
 };
-alphabit.addEventListener("click",function(){console.log("alphabit btn clicked!")});
-function alphabits() {
 
-} 
+alphabit.addEventListener("click",alphabits);
+function alphabits() {
+		str = document.getElementById('ltrInput').value.toLowerCase();
+		if (str.indexOf(" ") >= 0){
+			var index = str.indexOf(" ");
+			console.log(index);
+			var strArray = str.split('');
+			strArray.splice(index,1);
+			strArray.sort();
+			document.getElementById('output').innerHTML += `<li>${strArray.join(', ')}</li>`;
+		}else{}
+	}
+
 palindrome.addEventListener("click",function(){console.log("palindrome btn clicked!")});
 function palindrome() {
 
+
 }
+
+
  var testString = "Donkey Kong";
  //reversal(testString);
-// alphabits(testString);
+alphabits(testString);
 // palindrome(testString);
