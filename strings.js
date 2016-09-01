@@ -38,12 +38,12 @@ function palindromes() {
       document.getElementById('output').innerHTML +=`<li>Your string is a palindrome.</li>`;
     } 
     else{
-    	document.getElementById('output').innerHTML +=`<li>Your string is NOT a palindrome.</li>`;
+    	document.getElementById('output').innerHTML +=`<li>Your string is NOTgit a palindrome.</li>`;
 	}
 }
 
 
- var testString = "eye";
- //reversal(testString);
-// alphabits(testString);
+//var testString = "eye";
+//reversal(testString);
+//alphabits(testString);
 // palindromes(testString);
