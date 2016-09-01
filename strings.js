@@ -8,7 +8,7 @@ var palindrome = document.getElementById('palindrome');
 reverse.addEventListener("click", reversal);
 function reversal() {
 	var arr = document.getElementById('ltrInput').value.split(' ');
-	console.log(arr);
+	//console.log(arr);
 	var revArr = arr.reverse();
 	// console.log(revArr);
 	// console.log(revArr.join(' '));
@@ -20,7 +20,7 @@ function alphabits() {
 		str = document.getElementById('ltrInput').value.toLowerCase();
 		if (str.indexOf(" ") >= 0){
 			var index = str.indexOf(" ");
-			console.log(index);
+			//console.log(index);
 			var strArray = str.split('');
 			strArray.splice(index,1);
 			strArray.sort();
@@ -28,14 +28,22 @@ function alphabits() {
 		}else{}
 	}
 
-palindrome.addEventListener("click",function(){console.log("palindrome btn clicked!")});
-function palindrome() {
-
-
+palindrome.addEventListener("click",palindromes);
+function palindromes() {
+	var str = document.getElementById('ltrInput').value;
+	var stripped = str.toLowerCase().replace(/\W|_/gi, '');
+	var reversed = stripped.split('').reverse().join('');
+  if (stripped === reversed)
+    {
+      document.getElementById('output').innerHTML +=`<li>Your string is a palindrome.</li>`;
+    } 
+    else{
+    	document.getElementById('output').innerHTML +=`<li>Your string is NOT a palindrome.</li>`;
+	}
 }
 
 
- var testString = "Donkey Kong";
+ var testString = "eye";
  //reversal(testString);
-alphabits(testString);
-// palindrome(testString);
+// alphabits(testString);
+// palindromes(testString);
