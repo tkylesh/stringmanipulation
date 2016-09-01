@@ -1,15 +1,19 @@
 
-var ltr = document.getElementById('ltrInput').value;
-var btn = document.getElementById('btn');
+// var ltr = document.getElementById('ltrInput').value;
+var reverse = document.getElementById('reverse');
+// var out = document.getElementById('output');
 
-btn.addEventListener("click", reversal);
-
+reverse.addEventListener("click", reversal);
 function reversal() {
-	var arr = ltr.split(' ');
-	var revStr = arr.reverse();
-	document.getElementById('output').innerHTML += revStr.join(' ');
-	
-}
+	var arr = document.getElementById('ltrInput').value.split(' ');
+	console.log(arr);
+	var revArr = arr.reverse();
+	// console.log(revArr);
+	// console.log(revArr.join(' '));
+	document.getElementById('output').innerHTML += `<li>${revArr.join(' ')}</li>`;
+};
+
+
 
 
 function alphabits() {
@@ -18,7 +22,7 @@ function alphabits() {
 function palindrome() {
 
 }
-var testString = "";
-reversal(testString);
+ var testString = "It's on like Donkey Kong";
+ //reversal(testString);
 alphabits(testString);
 palindrome(testString);
